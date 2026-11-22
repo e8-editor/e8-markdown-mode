@@ -1,0 +1,6 @@
+{
+  "name": "markdown-mode",
+  "description": "A major mode for Markdown and GitHub Flavored Markdown, after Jason Blevins's markdown-mode.el",
+  "e8": "0.5.19",
+  "requires": {}
+}
