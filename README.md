@@ -16,7 +16,7 @@ E8 installs it at its newest version tag into `repos/` beside `init.ts`, records
 e8.setDefault("auto-mode-alist", [["README\\.md\\'", "gfm-mode"], ...(e8.defaultValue("auto-mode-alist") as e8.Value[])]);
 ```
 
-`M-x package-vc-upgrade` brings it up to date. Pin a version with `{ rev: "v0.1.0" }`. It needs E8 0.5.19 or newer.
+`M-x package-vc-upgrade` brings it up to date. Pin a version with `{ rev: "v0.1.0" }`. It needs E8 0.5.20 or newer.
 
 ## Using it
 
@@ -59,7 +59,6 @@ Headings, emphasis, inline code, fenced and indented code blocks, links, footnot
 - Markup is hidden with the `invisible` property, not composed into other characters, and a hidden URL is shown with a `display` string.
 - E8 has no `browse-url`: a URL is opened with the system's opener, `shell-command-guess-open` (`open` on macOS, `xdg-open` elsewhere), unless a package defines `browse-url`.
 - Where a block starts and ends is worked out from the lines of the buffer, kept until it changes, rather than with syntax properties, and inline markup with regular expressions over each paragraph, so unusual nesting may be styled differently.
-- E8 reads `C-m` and `RET`, and `C-i` and `TAB`, as different keys, where Emacs and a terminal do not, so `C-c C-x C-m` is bound as `C-c C-x RET` too and `C-c C-i` as `C-c TAB`.
 - There are no mouse bindings, no menu, no ElDoc, and nothing for flyspell, drag and drop or yanking images.
 
 ## Credit

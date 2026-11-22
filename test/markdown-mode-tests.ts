@@ -166,7 +166,7 @@ ertDeftest("markdown-markup-hiding-hides-markup", () => {
   should(e8.invisibleP(e8.bufferText().indexOf("**")), "and is hidden after C-c C-x C-m");
   should(e8.invisibleP(e8.bufferText().indexOf("http")), "and so is a link's URL");
   keys("C-c C-x RET");
-  should(!e8.invisibleP(e8.bufferText().indexOf("**")), "C-c C-x RET, as a terminal sends C-c C-x C-m, shows it again");
+  should(!e8.invisibleP(e8.bufferText().indexOf("**")), "C-c C-x RET, which C-c C-x C-m is, shows it again");
   keys("C-c C-x C-l");
   e8.call("font-lock-ensure");
   shouldEqual(e8.getTextProperty(e8.bufferText().indexOf("(http"), "display"), "∞");

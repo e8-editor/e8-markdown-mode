@@ -2337,9 +2337,6 @@ export const markdownMode = e8.defineMajorMode({
     "C-c C-x C-f": "markdown-toggle-fontify-code-blocks-natively",
     "C-c C-x C-l": "markdown-toggle-url-hiding",
     "C-c C-x C-m": "markdown-toggle-markup-hiding",
-    // C-m is RET and C-i is TAB in Emacs, as a terminal sends them; E8 reads them apart.
-    "C-c C-x RET": "markdown-toggle-markup-hiding",
-    "C-c TAB": "markdown-insert-image",
     "C-c C-x C-x": "markdown-toggle-gfm-checkbox",
     "C-c -": "markdown-insert-hr",
   } as unknown as { [keys: string]: e8.CommandName },
