@@ -1,0 +1,58 @@
+markdown-mode NEWS -- history of user-visible changes.
+
+This is the news of e8-markdown-mode, the E8 port of markdown-mode.
+'C-h P' shows it under the package's description.
+
+
+* Changes in markdown-mode 0.1.0
+
+This is the first release, a port of markdown-mode 2.9-alpha.  It
+needs E8 0.5.20 or newer.
+
+** 'markdown-mode' edits Markdown, and 'gfm-mode' GitHub Flavored Markdown.
+Files ending in '.md', '.markdown', '.mkd', '.mdown', '.mkdn', '.mdwn'
+and '.mdx' open in 'markdown-mode'.
+
+** Markdown is styled as it is shown.
+Headings, emphasis, inline code, code blocks, links, footnotes, lists
+and checkboxes, block quotes, tables, HTML, comments and YAML front
+matter have markdown-mode's faces, for a theme to style.  Emphasis
+and links may run over a paragraph's lines, and nothing inside code is
+styled as Markdown.
+
+** 'TAB' on a heading folds it, and 'S-TAB' folds the buffer.
+Elsewhere 'TAB' indents, to the next likely column each time.
+
+** Headings and list items are moved, promoted and demoted.
+'C-c C-n', 'C-c C-p', 'C-c C-f', 'C-c C-b' and 'C-c C-u' go between
+headings; 'C-c C--' and 'C-c C-=' promote and demote; 'C-c <up>' and
+'C-c <down>' move a heading's subtree or a list item.
+
+** 'M-RET' inserts a list item.
+The next number, the same bullet, or an unticked checkbox after one.
+
+** 'C-c C-s' inserts markup.
+Bold, italic, inline code, strike-through and '<kbd>' around the
+region or the word at point, headings, fenced code blocks, block
+quotes, rules, checkboxes and footnotes.
+
+** Links are inserted and followed.
+'C-c C-l' and 'C-c C-i' insert an inline link or image; 'C-c C-o'
+follows the link at point, to a URL or a file; 'M-n' and 'M-p' go
+between links.
+
+** 'C-c C-d' does what makes sense at point.
+It ticks a checkbox, follows a link, or goes between a footnote's
+marker and its definition.
+
+** Markup and URLs can be hidden.
+'C-c C-x C-m' hides markup, link URLs included; 'C-c C-x C-l' shows
+inline links' URLs as a single character.
+
+** Code blocks can be styled in their language's own faces.
+'C-c C-x C-f' toggles 'markdown-fontify-code-blocks-natively'.
+
+** 'M-x imenu' lists the headings.
+
+** There is no export, preview or table editing.
+The README lists what markdown-mode.el has that the port does not.
